@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    margin : 0;
+    padding :0;
+}
+
+header{
+    width: 330px;
+    height: 100%;
+    border-right: solid 1px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+}
+
+header > .logo{
+    width: 100px;
+    height: 30px;
+    margin: 35px 190px 40px 3px;
+}
+
+header > .nav{
+    width: 88%;
+    height: 35px;
+    padding: 8px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    transition: .1s;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+header > .nav:hover{
+    background-color: #eeeeee;
+}
+
+header> .nav > .icon > svg{
+    transition: .3s;
+}
+
+header > .nav:hover svg,
+header > .nav:hover .myprofileicon{
+    transform: scale(1.1);
+}
+
+.profile.nav .icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    transition: .3s;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body{
+    display: flex;
+    width: 700px;
+    height: 100%;
+    margin:0 auto;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.body > .stories{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.body > .stories > .story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.story > .id{
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.story >.icon{
+    width: 63px;
+    height: 63px;
+    border-radius: 100px;
+    border: solid 1px lightgray;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story > .icon > img{
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    border: solid 1px lightgray;
+}
+
+.body > .posts{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body > .posts > .post{
+    width: 475px;
+    height: 780px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.post::-webkit-scrollbar{
+    display: none;
+}
+
+.body > .posts > .post > .postHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.headerWrap .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerWrap{
+    display: flex;
+    align-items: center;
+}
+
+.body > .posts > .post > .postHeader .headerWrap{
+    display: flex;
+    gap: 3px;
+}
+
+/* 슬라이드 컨테이너 */
+.postPic {
+    position: relative;
+    width: 470px;
+    height: 470px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+/* 슬라이드 내부 */
+.picSlide {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 400%; /* 모든 슬라이드를 포함할 수 있도록 설정 */
+}
+
+.sendChat::placeholder{
+    color: rgba(115,115,115,.85);
+}
+
+.insert, .product, .shop, .sale {
+    width: 470px;
+    height: 470px;
+    display: flex;
+}
+
+.insert, .product, .shop{
+    justify-content: center;
+    align-items: center;
+}
+
+.sale::-webkit-scrollbar{
+    display: none;
+}
+
+.sale{
+    overflow-y: scroll;
+    font-size: 11px;
+    justify-content: center;
+}
+
+/* 이전, 다음 버튼 스타일 */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.93);
+    border-radius: 100px;
+    color: rgba(91, 91, 91, 0.75);
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
+    line-height: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse; /* 셀 테두리 간에 여백을 없앰 */
+}
+/* 각 셀에 테두리 추가 */
+table, th, td {
+    border: 1px solid black; /* 테두리를 검은색으로 설정 */
+    text-align: left; /* 셀 안의 텍스트를 왼쪽 정렬 */
+    padding: 8px; /* 셀에 적당한 여백을 줌 */
+}
+
+/* 테이블 헤더 스타일 */
+th {
+    background-color: #f2f2f2; /* 헤더 셀의 배경을 연회색으로 설정 */
+}
+
+.btn{
+    background: none;
+    border: solid 1px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.actionWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    padding: 8px 0px;
+}
+
+.actionWrap > *:hover{
+    opacity: .5;
+}
+
+#chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chatWrap > .id{
+    margin-right: 4px;
+}
+
+
+.likeBtnsvg{
+    opacity: .5;
+}
+
+.ring{
+    width: 107%;
+    position: absolute;
+    top: -2px;
+}
+
+.mheader{
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-evenly;
+    background-color: white;
+    border-top: solid 1px lightgray;
+    padding: 10px;
+}
+
+.slogo{
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+@media screen and (max-width: 1450px) {
+    header{
+        width: 200px;
+    }
+    header > .logo{
+        width: 100px;
+        height: 30px;
+        margin: 35px 80px 40px 3px;
+    }
+
+}
+@media screen and (max-width: 1150px) {
+    header{
+        width: 75px;
+    }
+    .txt{
+        display: none;
+    }
+
+    header> .nav{
+        width: 30px;
+    }
+
+    .header > .logo{
+        width: 30px;
+    }
+
+    header > .logo > img{
+        display: none;
+    }
+
+    .slogo{
+        display: block;
+    }
+}
+@media screen and (max-width: 825px) {
+    header{
+       display: none;
+    }
+
+    .story{
+        width: 40px;
+    }
+
+    .story > .icon{
+        width: 30px;
+        height: 30px;
+    }
+
+   .story .icon img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .ring{
+        width: 55px;
+        top: -11px;
+    }
+
+    .story > .id{
+        font-size: 10px;
+    }
+
+    .mheader{
+        display: flex;
+    }
+}
+
+

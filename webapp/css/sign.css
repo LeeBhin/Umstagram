@@ -1,0 +1,204 @@
+html, body{
+    width: 100%;
+}
+
+*{
+    margin : 0;
+    padding :0;
+    text-decoration: none;
+    color: black;
+}
+
+.loginForm{
+    width: 345px;
+    height: 574px;
+    margin: 10px auto 10px;
+    border: solid 1px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    padding: 30px 0 5px;
+}
+
+.des{
+    color: #737373;
+    font-weight: bold;
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input{
+    border: solid 1px lightgray;
+    width: 75%;
+    padding: 13px 0 10px 5px;
+    background-color: #fafafa;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: .25s;
+    outline: none;
+}
+input::placeholder {
+    font-size: 12px;
+    padding-left: 7px;
+    transition: all 0.25s;
+}
+
+input:focus::placeholder {
+    font-size: 10px;
+    transform: translate(-8px,-12px);
+}
+
+.google{
+    cursor: pointer;
+    width: 75%;
+    background-color: #0095f6;
+    border-radius: 7px;
+    padding: 7px 0;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.submit{
+    width: 75%;
+    background-color: #00c3ff;
+    border-radius: 7px;
+    padding: 7px 0;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.or{
+    position: relative;
+    margin-bottom:25px;
+}
+
+.orTxt{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: gray;
+}
+
+.more{
+    color: #00376b;
+    cursor: pointer;
+}
+
+.maybe{
+    width: 80%;
+    font-size: 12px;
+    color: #737373;
+    text-align: center;
+    margin: 8px;
+}
+
+.line{
+    border-bottom: solid 1px lightgray;
+    width: 260px;
+    height: 8px;
+}
+
+
+.lost{
+    font-size: 12px;
+    color: #00376b;
+    cursor: pointer;
+}
+
+.signForm{
+    width: 345px;
+    height: 60px;
+    margin: 0 auto;
+    border: solid 1px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.no{
+    font-size: 14px;
+}
+
+.goSign a{
+    font-weight: bold;
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.down{
+    width: 300px;
+    text-align: center;
+    margin: 18px auto 18px;
+    font-size: 14px;
+}
+
+.downBtn{
+    width: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 30px;
+}
+
+.downBtn img{
+    cursor: pointer;
+}
+
+footer ul li{
+    display: inline-block;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 55px;
+    margin-top: 60px;
+}
+
+footer > ul > li > a{
+    font-size: 12px;
+    color: #737373;
+    margin: 4px;
+}
+
+select{
+    width: 60px;
+    border: none;
+    outline: none;
+    color: #737373;
+    cursor: pointer;
+}
+
+footer > ul > li > a:hover{
+    text-decoration: underline;
+}
+

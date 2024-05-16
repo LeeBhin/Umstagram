@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>로그인 • Umstagram</title>
+    <link rel="stylesheet" href="css/login.css?after">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    <!-- Firebase SDK (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+<div class="loginForm lg">
+    <div class="logo"><img src="images/umstagram.png" alt="" width="200px"></div>
+    <input type="text" id="email" placeholder="전화번호, 사용자 이름 또는 이메일">
+    <input type="password" name="" id="password" placeholder="비밀번호">
+    <button class="submit">로그인</button>
+
+    <div class="or">
+        <span class="orTxt">또는</span>
+        <div class="line"></div>
+    </div>
+    <button id="google-signin"><svg width="15px" height="15px" viewBox="-3 0 262 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/></svg>Google로 로그인</button>
+
+    <span class="lost" onclick="window.location.href='https://www.instagram.com/accounts/password/reset/'">비밀번호를 잊으셨나요?</span>
+</div>
+
+<div class="signForm">
+    <span class="no">계정이 없으신가요? <span class="goSign"><a href="sign.html">가입하기</a></span></span>
+</div>
+
+<div class="down">앱을 다운로드하세요.</div>
+<div class="downBtn">
+    <img src="https://static.cdninstagram.com/rsrc.php/v3/ye/r/UtJtFmFLCiD.png"
+         alt=""
+         height="40px"
+         onclick="window.open('https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3DF238E525-0673-4B7C-8956-53D6856B0CAD%26utm_campaign%3DloginPage%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge%26original_referrer%3Dhttps://www.instagram.com/accounts/login/?hl%3Des-es&pli=1', '_blank')">
+
+    <img src="https://static.cdninstagram.com/rsrc.php/v3/yw/r/LBxTdceDfgS.png"
+         alt=""
+         height="40px"
+         onclick="window.open('ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C1920%2C1032', '_blank')">
+
+</div>
+
+<footer>
+    <ul>
+        <li><a href="">Meta</a></li>
+        <li><a href="">소개</a></li>
+        <li><a href="">블로그</a></li>
+        <li><a href="">채용 정보</a></li>
+        <li><a href="">도움말</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">약관</a></li>
+        <li><a href="">위치</a></li>
+        <li><a href="">Umstagram Lite</a></li>
+        <li><a href="">Threads</a></li>
+        <li><a href="">연락처 업로드 & 비사용자</a></li>
+        <li><a href="">Meta Verified</a></li>
+        <br>
+        <li style="margin-top: 20px"><a>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="zh-CN">简体中文</option>
+                <option value="es">Español</option>
+                <option value="hi">हिन्दी</option>
+                <option value="ar">العربية</option>
+                <option value="pt">Português</option>
+                <option value="bn">বাংলা</option>
+                <option value="ru">Русский</option>
+                <option value="ja">日本語</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ko" selected>한국어</option>
+                <option value="tr">Türkçe</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="it">Italiano</option>
+                <option value="nl">Nederlands</option>
+                <option value="th">ภาษาไทย</option>
+                <option value="fa">فارسی</option>
+                <option value="pl">Polski</option>
+                <option value="tl">Filipino</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="uk">Українська</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="sv">Svenska</option>
+                <option value="el">Ελληνικά</option>
+                <option value="cs">Čeština</option>
+                <option value="da">Dansk</option>
+                <option value="fi">Suomi</option>
+                <option value="hu">Magyar</option>
+                <option value="no">Norsk</option>
+                <option value="ro">Română</option>
+                <option value="sk">Slovenčina</option>
+                <option value="he">עברית</option>
+                <option value="sr">Српски</option>
+                <option value="hr">Hrvatski</option>
+                <option value="bg">български</option>
+                <option value="lt">Lietuvių</option>
+                <option value="sl">Slovenščina</option>
+                <option value="et">Eesti</option>
+                <option value="lv">Latviešu</option>
+                <option value="is">Íslenska</option>
+                <option value="ga">Gaeilge</option>
+            </select>
+
+        </a></li>
+        <li><a href="">© 2024 Umstagram from umta</a></li>
+    </ul>
+</footer>
+
+</body>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyB1fq1idRid0tALckasn45bcLLXO5OLeH4",
+        authDomain: "umstagram-d60cc.firebaseapp.com",
+        projectId: "umstagram-d60cc",
+        storageBucket: "umstagram-d60cc.appspot.com",
+        messagingSenderId: "370794491709",
+        appId: "1:370794491709:web:b995461f9dc188a99f5f54",
+        measurementId: "G-X4TNX7NBZ8"
+    };
+
+    // Firebase 앱 초기화
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Google 인증 공급자 생성
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    // 로그인 버튼 이벤트 리스너 추가
+    const signInButton = document.getElementById('google-signin');
+    signInButton.addEventListener('click', () => {
+        auth.signInWithPopup(provider)
+            .then((result) => {
+                // 로그인 성공
+                const user = result.user;
+                window.location.href="index.jsp";
+            })
+            .catch((error) => {
+                // 오류 처리
+                console.error('Error:', error);
+                alert('로그인에 실패했습니다. 오류 메시지를 확인하세요.');
+            });
+    });
+
+    document.getElementById("email").addEventListener("input", validateInputs);
+    document.getElementById("password").addEventListener("input", validateInputs);
+
+    function validateInputs() {
+        var email = document.getElementById("email").value.trim();
+        var password = document.getElementById("password").value.trim();
+        var submitButton = document.querySelector(".submit");
+
+        if (email !== "" && password !== "") {
+            submitButton.style.backgroundColor = "#0095f6";
+            submitButton.disabled = false;
+            submitButton.style.cursor='pointer'
+        } else {
+            submitButton.style.backgroundColor = "#00c3ff";
+            submitButton.disabled = true;
+        }
+    }
+
+
+    // 이메일과 비밀번호로 로그인 처리
+    const loginForm = document.querySelector('.submit');
+    loginForm.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        auth.signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                // 로그인 성공
+                window.location.href = "index.jsp";  // Redirect on successful login
+            })
+            .catch((error) => {
+                // 오류 처리
+                alert('로그인에 실패했습니다: ' + error.message);
+            });
+    });
+</script>
+</html>
